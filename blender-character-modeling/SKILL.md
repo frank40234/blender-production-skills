@@ -77,6 +77,10 @@ Numeric values are task budgets, not style rules. Resolve them from the target a
 
 Use `references/anime-character-profile.md`. Preserve deliberate exaggeration and asymmetry from the reference. Do not normalize large eyes, head shape, limb proportions, hand/foot simplification, or hair masses to realistic anatomy. Compare both the complete contour and identity-critical facial/hair landmarks. Separate eye geometry, iris/pupil layers, and hair clumps only when needed by style, material, deformation, or silhouette control; do not turn every color patch into an object.
 
+## Low-Poly Real-Time Game Profile
+
+For low-poly real-time characters, including user-referenced visual targets such as R.E.P.O. or Lethal Company, use `references/low-poly-game-character-profile.md`. Treat game names as visual references only: derive proportions, facets, palette, and detail from supplied images and the target project's constraints. Do not infer a game's internal topology, polygon count, rendering pipeline, or implementation from its appearance.
+
 ## Fit And Deformation Checks
 
 - Static fit: inspect garment/body and hair/face intersections in neutral pose from front, side, and three-quarter views. Record intended contacts, hidden overlaps, and clearance assumptions.
