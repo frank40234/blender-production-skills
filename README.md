@@ -43,6 +43,7 @@
 `blender-production-router` 是顶层入口；其余目录是按领域拆分的 Specialist Skills：
 
 - `blender-direct-surface-modeling`：点线面、BMesh、Boolean、Remesh、Sculpt 与重拓扑。
+- `blender-character-modeling`：人物比例、角色参考、剪影优先建模、面数/拓扑预算、头发衣物结构与穿插检查。
 - `blender-procedural-systems`：Array、曲线、实例、散布和程序化系统。
 - `blender-geometry-nodes-studio`：Geometry Nodes 图、字段、实例和模拟区。
 - `blender-simulation-effects`：布料、软体、刚体、流体、水体、粒子与破碎。

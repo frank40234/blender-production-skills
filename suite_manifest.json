@@ -25,6 +25,10 @@
       "role": "Direct mesh, BMesh, subdivision, Boolean architectural openings, Displace relief, remesh, sculpt, retopology, and connection construction."
     },
     {
+      "name": "blender-character-modeling",
+      "role": "Character-specific reference analysis, proportion planning, silhouette-first blockout, topology and density planning, hair/clothing construction, and character-fit validation; defers route and stage authority to the Router."
+    },
+    {
       "name": "blender-assembly-structure",
       "role": "Manufacturing-based Part Graphs, object boundaries, seams, mating interfaces, pivots, modular grids, precision snapping, constraints, hierarchy, and assembly validation."
     },
@@ -68,7 +72,7 @@
   "discovery": {
     "layout": "nested-skills",
     "skill_entrypoint": "SKILL.md",
-    "expected_skill_count": 15
+    "expected_skill_count": 16
   },
   "legacy_backup": "C:\\Users\\Administrator\\.codex\\skills-backup\\20260805-002546-topology-first-full-suite",
   "pre_progressive_analysis_backup": "C:\\Users\\Administrator\\.codex\\skills-backup\\20260805-013141-pre-progressive-analysis",

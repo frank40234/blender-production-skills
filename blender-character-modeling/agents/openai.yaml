@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blender Character Modeling"
+  short_description: "Plan character proportions, topology, hair, clothing, and fit"
+  default_prompt: "Use $blender-character-modeling to plan and validate this Blender character against its style, references, and deformation needs."

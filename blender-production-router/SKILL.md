@@ -73,6 +73,7 @@ success criterion.
    - `blender-scene-design`
    - `blender-reference-reconstruction`
    - `blender-direct-surface-modeling`
+   - `blender-character-modeling` for human or humanoid character modeling, especially reference-guided stylized/anime characters
    - `blender-assembly-structure`
    - `blender-deformation-rigging`
    - `blender-simulation-effects`
@@ -106,6 +107,7 @@ cache plus RNA probing and mark official-document verification as cached rather 
 - Use `blender-scene-design` for the visual thesis, focal hierarchy, depth layers, visual flow,
   camera mobility, representation budget, and performance budget. It never owns construction or state.
 - Use `blender-reference-reconstruction` before other specialists when an image defines visible-frame composition, object or material identity, lighting, aging, or photographic treatment. This skill supervises evidence and convergence while downstream skills still own construction.
+- For human or humanoid character modeling, load `blender-character-modeling` to define character-specific proportions, silhouette priorities, topology budgets, clothing/hair boundaries, and fit checks. It complements rather than replaces reference reconstruction, direct surface modeling, rigging, surfacing, or validation.
 - Use direct topology, subdivision control cages, Boolean, remesh, sculpt, or retopology for unique static form.
 - Use one host volume plus a reusable Boolean Difference cutter for a door, window, arch, niche,
   or portal in one monolithic wall. Build separate jamb/lintel pieces only when they are genuinely

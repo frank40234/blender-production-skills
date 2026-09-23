@@ -1,5 +1,18 @@
 [
   {
+    "id": "anime-character-with-reference",
+    "request": "依照這張動漫角色參考圖製作可檢視多視角的人物模型，先比對白模比例",
+    "expected_selected": "reference_reconstruction",
+    "expected_specialists": ["blender-character-modeling", "blender-reference-reconstruction", "blender-direct-surface-modeling"],
+    "must_forbid": ["detail_before_transition_forms"]
+  },
+  {
+    "id": "stylized-character-no-image",
+    "request": "建立一個可調整比例的風格化動漫人物模型",
+    "expected_specialists": ["blender-character-modeling", "blender-direct-surface-modeling"],
+    "unexpected_specialists": ["blender-reference-reconstruction"]
+  },
+  {
     "id": "bend-ring",
     "request": "把这个有足够分段的长条弯成完整环形",
     "expected_selected": "simple_deform",

@@ -1759,6 +1759,22 @@ def _deliverable(text: str) -> str:
     return "asset"
 
 
+def _is_character_modeling_task(text: str) -> bool:
+    lowered = text.lower()
+    direct_terms = (
+        "人物建模", "人物模型", "角色建模", "角色模型", "人形模型",
+        "動漫人物", "动漫人物", "動畫人物", "动画人物", "動漫角色模型",
+        "动漫角色模型", "character model", "character modeling", "anime figure",
+    )
+    if any(term in lowered for term in direct_terms):
+        return True
+    character_terms = ("角色", "人物", "character", "humanoid", "anime character")
+    modeling_terms = ("建模", "模型", "網格", "网格", "mesh", "model", "modeling", "sculpt")
+    return any(term in lowered for term in character_terms) and any(
+        term in lowered for term in modeling_terms
+    )
+
+
 def classify_request(request: str, capabilities: dict[str, Any] | None = None) -> dict[str, Any]:
     text = request.lower().strip()
     cards = _load_cards()
@@ -1943,6 +1959,13 @@ def classify_request(request: str, capabilities: dict[str, Any] | None = None) -
         for item in candidates[:4]
     ):
         specialist_sequence.append("blender-geometry-nodes-studio")
+    if _is_character_modeling_task(text):
+        insert_at = (
+            specialist_sequence.index("blender-direct-surface-modeling")
+            if "blender-direct-surface-modeling" in specialist_sequence
+            else 1
+        )
+        specialist_sequence.insert(insert_at, "blender-character-modeling")
     specialist_sequence.append("blender-geometry-validation")
     construction_method_decision = {
         "shape_grammar_review_required": True,

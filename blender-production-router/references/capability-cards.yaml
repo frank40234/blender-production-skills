@@ -1,5 +1,17 @@
 schema_version: "1.0"
 cards:
+  - id: character_modeling
+    category: modeling
+    supported_versions: ">=5.1"
+    use_when: [human or humanoid character modeling, stylized or anime character from references, character proportion and topology planning, hair and clothing fit review]
+    do_not_use_when: [non-character prop or environment, reference interpretation without a character modeling deliverable]
+    prerequisites: [declared character purpose and style, available reference views recorded with uncertainty, intended pose and deformation scope]
+    primary_system: Character-specific analysis and staged modeling protocol coordinated with Direct Surface Modeling
+    alternatives: [direct_mesh_editing, voxel_remesh_sculpt]
+    failure_signs: [single-view match with implausible volume, generic human proportions overriding stylized reference, detail added before silhouette approval, uniform density without deformation need, clothing or hair intersections]
+    validation: [fixed-view silhouette and landmark comparison, orthogonal and three-quarter inspection, per-region evaluated face budget, static clothing/hair fit review, deformation pose checks when rigged]
+    official_sources: []
+
   - id: reference_reconstruction
     category: supervision
     supported_versions: ">=5.1"
